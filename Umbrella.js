@@ -11,9 +11,10 @@ class Umbrella extends Component {
     this.setChild1Ref = this.setChild1Ref.bind(this);
     this.setChild2Ref = this.setChild2Ref.bind(this);
     this.setChild3Ref = this.setChild3Ref.bind(this);
+    this.onSelectPost = this.onSelectPost.bind(this);
+    this.onPostEdited = this.onPostEdited.bind(this);
 
-    // this.posts = this.props.posts; // In reality
-
+    // Just use this.props.posts in reality
     this.posts = [
       {
         id: 1,
@@ -61,8 +62,8 @@ class Umbrella extends Component {
     return (
       <div>
         <Child1 posts={this.posts} onSelectPost={this.onSelectPost} ref={this.setChild1Ref}/>
-        <Child2 onPostEdited={this.onPostEdited} ref={this.setChild1Ref}/>
-        <Child3 ref={this.setChild1Ref}/>
+        <Child2 onPostEdited={this.onPostEdited} ref={this.setChild2Ref}/>
+        <Child3 ref={this.setChild3Ref}/>
       </div>
     );
   }

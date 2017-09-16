@@ -7,6 +7,7 @@ class Child1 extends Component {
     super(props);
 
     this.getPosts = this.getPosts.bind(this);
+    this.onSelectPost = this.onSelectPost.bind(this);
 
     this.state = {
       posts: this.props.posts || []
